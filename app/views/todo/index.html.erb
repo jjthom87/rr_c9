@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag "todo.css" %>
+<h1 style="width:300px;height:100px;border:1px solid;" onclick="javascript:document.getElementById('whatever').innerHTML='terrible';">Hello world!</h1>
+4 + 3 = <%= 4+3 %>
+<br></br>
+<br></br>
+<h3 style="color: <%= 
+    if @priority == 'high'
+        @color = "red"
+    elsif @priority == "low"
+        @color = "blue"
+    else
+        @color = "yellow"
+    end
+%>" class=<%= if @status == 'done'
+    @status_class = 'done'
+end
+%>>Priority
+</h3>
+Arize is <span id="whatever"><%= @arize_description %></span>
